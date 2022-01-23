@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "test:watch": "test -- --watch",
-    "test:staged": "test -- --findRelatedTests",
-    "test:ci": "test -- --coverage"
+    "test:watch": "yarn test --watch",
+    "test:staged": "yarn test --findRelatedTests",
+    "test:ci": "yarn test --coverage"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
