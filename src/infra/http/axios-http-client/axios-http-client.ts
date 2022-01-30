@@ -1,9 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { HttpPostParams } from '@/data/protocols/http'
+import { HttpPostClient, HttpPostParams, HttpResponse } from '@/data/protocols/http'
 import axios from 'axios'
 
-export class AxiosHttpClient {
-  async post (params: HttpPostParams<any>): Promise<void> {
-    await axios.post(params.url, params.body)
+export class AxiosHttpClient implements HttpPostClient<any, any> {
+  async post (params: HttpPostParams<any>): Promise<HttpResponse<any>> {
+    const httpResponse = await axios.post(params.url, params.body)
+    return {
+      statusCode: httpResponse.status,
+      body: httpResponse.data
+    }
   }
 }
