@@ -1,12 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { HttpPostClient } from '@/data/protocols/http/http-post-client'
-import { HttpStatusCode } from '@/data/protocols/http/http-response'
+import { HttpPostClient, HttpStatusCode } from '@/data/protocols/http'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Authentication, AuthenticationParams } from '@/domain/usecases/authentication'
+import { Authentication, AuthenticationParams } from '@/domain/usecases'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { AccountModel } from '@/domain/models/account-model'
-import { InvalidCredentialsError } from '@/domain/errors/invalid-credentials-error'
-import { UnexpectedError } from '@/domain/errors/unexpected-error'
+import { AccountModel } from '@/domain/models'
+import { InvalidCredentialsError, UnexpectedError } from '@/domain/errors'
 
 export class RemoteAuthentication implements Authentication {
   constructor (

@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { AuthenticationParams } from '@/domain/usecases/authentication'
+import { AuthenticationParams } from '@/domain/usecases'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { AccountModel } from '../models/account-model'
+import { AccountModel } from '../models'
 import faker from 'faker'
 
 export const mockAuthentication = (): AuthenticationParams => ({
