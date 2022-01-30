@@ -1,8 +1,8 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { HttpPostParams } from '@/data/protocols/http'
 import { AxiosHttpClient } from './axios-http-client'
 import axios from 'axios'
 import faker from 'faker'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { HttpPostParams } from '@/data/protocols/http'
 
 jest.mock('axios')
 const mockedAxios = axios as jest.Mocked<typeof axios>
